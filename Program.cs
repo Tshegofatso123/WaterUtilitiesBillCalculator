@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterUtilitiesBillCalculator
 {
-    internal class Customer
+    internal class Customer//CLASS
     {
         private string Firstname;
         private string Lastname;
@@ -15,7 +15,7 @@ namespace WaterUtilitiesBillCalculator
         private int Usertype;
         private double AmntUsed;
 
-        public string Fname
+        public string Fname//OBJECT CONSTRUCTOR
         {
             get
             {
@@ -84,7 +84,7 @@ namespace WaterUtilitiesBillCalculator
                 AmntUsed = value;
             }
         }
-
+//METHOD TO CALCULATE VAT
         double VRate;
         double WaterUsed;
         double VAT;
@@ -98,9 +98,9 @@ namespace WaterUtilitiesBillCalculator
 
      class CustomerInfo
         {
-         public static void Main(string[] args)
+         public static void Main(string[] args)//MAIN METHOD
           {
-                string Firstname, Lastname,Location;
+                string Firstname, Lastname,Location;    //VARIABLE DECLARATIONS
                 double PlotNumber, VAT,AmntUsed;
                 int A, B;
                 
@@ -119,7 +119,7 @@ namespace WaterUtilitiesBillCalculator
                 Console.Write("Enter Amount of WaterUsed:");
                 AmntUsed= Convert.ToInt32(Console.ReadLine());
                 
-             
+             //METHOD TO CALCULATE COSTS FOR CASE A
               if (AmntUsed<=5)
                 {
                   Console.WriteLine("Potable water tariff is P3.60,Wastewater tariff is P0.65");
@@ -155,7 +155,7 @@ namespace WaterUtilitiesBillCalculator
 
                 }
 
-
+//METHOD TO CALCULATE TOTAL COSTS FOR CASE B
               else
                 {
                     if(AmntUsed <=5) 
